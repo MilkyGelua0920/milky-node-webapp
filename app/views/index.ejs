@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Milky</title>
+</head>
+<body>
+	<div>
+
+		<hr>
+		<h1>Milky</h1>
+		<hr>
+
+		<hr>
+		<form action="/logout" method="POST">
+			<button type="submit">Log Out</button>
+		</form>
+		<hr>
+
+		<hr>
+		<button onclick="location = '/'">Home</button>
+		<button onclick="location = '/profile'">Profile</button>
+		<hr>
+		
+		<hr>
+		<pre><%= JSON.stringify(user, null, 4) %></pre>
+		<hr>
+
+	</div>
+</body>
+</html>

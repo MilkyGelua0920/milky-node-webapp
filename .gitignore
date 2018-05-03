@@ -1,0 +1,6 @@
+node_modules/
+.env
+public/
+files/
+server.bundle.js
+server.bundle.js.map

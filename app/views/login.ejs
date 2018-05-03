@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Milky</title>
+</head>
+<body>
+	<div>
+
+		<hr>
+		<h1>Milky</h1>
+		<hr>
+
+		<hr>
+		<form action="/login" method="POST">
+			<label>Email: </label>
+			<input type="email" name="email" value="MilkyGelua0920@gmail.com">
+			<br>
+			<label>Password: </label>
+			<input type="Password" name="password" value="ingkangkong">
+			<br>
+			<button type="submit">Log In</button>
+			<br>
+			<span><%= loginError ? loginError.message : null %></span>
+		</form>
+		<hr>
+
+		<hr>
+		<form action="/register" method="POST">
+			<label>First Name: </label>
+			<input type="text" name="first_name" value="Christian Arvi">
+			<br>
+			<label>Last Name: </label>
+			<input type="text" name="last_name" value="Cheng">
+			<br>
+			<label>Email: </label>
+			<input type="email" name="email" value="ChemicalKid07@gmail.com">
+			<br>
+			<label>Password: </label>
+			<input type="password" name="password" value="123">
+			<br>
+			<label>Gender: </label>
+			<input type="radio" name="gender" value="Male" checked="true">
+			<label>Male</label>
+			<input type="radio" name="gender" value="Female">
+			<label>Female</label>
+			<br>
+			<label>Date of Birth: </label>
+			<input type="date" name="date_of_birth" value="1995-07-31">
+			<br>
+			<button type="Submit">Register</button>
+			<br>
+			<span><%= registerError ? registerError.message : null %></span>
+		</form>
+		<hr>
+
+	</div>
+</body>
+</html>

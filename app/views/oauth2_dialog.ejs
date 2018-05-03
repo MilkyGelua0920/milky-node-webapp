@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Milky</title>
+</head>
+<body>
+	<div>
+		<p>Hi <%= user.person.first_name %> <%= user.person.last_name %>!</p>
+		<p><strong><%= client.name %></strong> is requesting <strong>full access</strong> to your account.</p>
+		<form action="/oauth2/authorize" method="POST">
+			<input type="hidden" name="transaction_id" value="<%= transactionID %>">
+			<button type="submit" value="Allow">Allow</button>
+			<button type="submit" value="Deny">Deny</button>
+		</form>
+	</div>
+</body>
+</html>

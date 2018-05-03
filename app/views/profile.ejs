@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Milky</title>
+</head>
+<body>
+	<div>
+
+		<hr>
+		<h1>Milky</h1>
+		<hr>
+
+		<hr>
+		<form action="/logout" method="POST">
+			<button type="submit">Log Out</button>
+		</form>
+		<hr>
+
+		<hr>
+		<button onclick="location = '/'">Home</button>
+		<button onclick="location = '/profile'">Profile</button>
+		<hr>
+		
+		<hr>
+		<table>
+			<tr>
+				<td colspan="2"><h3><u>User</u></h3></td>
+			</tr>
+			<tr>
+				<td>Picture: </td>
+				<td colspan="1">
+					<img src="/profile/picture" height="100" width="100">
+					<form action="/profile/picture" method="POST" enctype="multipart/form-data">
+						<label>Upload Image</label>
+						<input type="file" name="image">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>Email: </td>
+				<td><strong><%= user.email %></strong></td>
+			</tr>
+			<tr>
+				<td colspan="2"><h3><u>Personal Information</u></h3></td>
+			</tr>
+			<tr>
+				<td>First Name: </td>
+				<td><strong><%= user.person.first_name %></strong></td>
+			</tr>
+			<tr>
+				<td>Middle Name: </td>
+				<td><strong><%= user.person.middle_name %></strong></td>
+			</tr>
+			<tr>
+				<td>Last Name: </td>
+				<td><strong><%= user.person.last_name %></strong></td>
+			</tr>
+			<tr>
+				<td>Gender: </td>
+				<td><strong><%= user.person.gender %></strong></td>
+			</tr>
+			<tr>
+				<td>Civil Status: </td>
+				<td><strong><%= user.person.civil_status %></strong></td>
+			</tr>
+			<tr>
+				<td>Date of Birth:  </td>
+				<td><strong><%= moment(user.person.date_of_birth).format('MMMM D, YYYY') %></strong></td>
+			</tr>
+		</table>
+		<hr>
+
+	</div>
+</body>
+</html>
